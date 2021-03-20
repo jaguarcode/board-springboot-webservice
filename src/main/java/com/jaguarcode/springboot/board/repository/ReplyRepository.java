@@ -7,6 +7,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface ReplyRepository extends JpaRepository<Reply, Long> {
     @Modifying
-    @Query("delete from Reply r where r.board.bno =: bno")
+    @Query("delete from Reply r where r.board.bno =:bno")
     void deleteByBno(Long bno);
 }
